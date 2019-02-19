@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FoodSnap</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+        
+        <script type="text/javascript">
+        </script>
+    </head>
+    <body>
+<!--Skal endres til bootstrap for å gjøre siden responsive-->
+
+<!--Header-->
+<!--Bilde må justeres til å passe på siden-->
+<header>
+    <h1>FoodSnap</h1>
+    <p>By Progteam</p>
+</header>
+
+<!--Navigation Bar-->
+<!--Kun Hoved siden (hjemme side) er laget. Ingen knapper er lagt til-->
+<!--Se på W3School for dropdown/piechart meny-->
+<nav>
+    <a class="logo" href="#"><i class="fas fa-utensils"></i> FoodSnap</a>
+    <a href="#"><i class="fas fa-mobile"></i> Mobile</a>
+    <a href="#"><i class="fas fa-file-signature"></i> Contact</a>
+    <a href="#"><i class="fas fa-mug-hot"></i> About</a>
+</nav> 
+
+<!--Content-->
+<!--Ikonene er ikke knapper enda. Må endres til knapp-->
+<div class="row">
+    <div class="side">
+        <h2>Analyse Food:</h2>
+        <h5>Upload picture of food:</h5>
+        <form action="" method="post" enctype="multipart/form-data">
+            <input type="file" accept="image/*" name="fileToUpload" id="fileToUpload" onchange="loadFile(event)" style="display: none;">
+            <img src="img/upload.png" id="output" style="width:300px;"/>
+            <input type="button" value="Analyser" name="submit" style="width:300px; height:25px;" onclick="upload();">
+        </form>
+        
+        <br />
+          <div id="imageInfo"></div>
+          <br />
+          <p>Fruit! in culpa qui officia deserunt mollit anim..</p>
+          
+          <h3>Content of uploaded picture:</h3>
+          <p>Lorem ipsum dolor sit ame.</p>
+          <div id="piechart"></div>
+          <div class="icons">
+            <i class="fas fa-cart-plus"> Add to cart</i> 
+            <i class="fas fa-heart"> Favorite</i>
+          </div>
+          
+        </div>
+        <div class="main">
+          <h2>Information Table:</h2>
+          <!--Legg til bilde eller noe her hvis du ønsker det (image placeholder eksempel)-->
+          <div class="fakeimg" style="height:200px;"></div>
+          <p>How to make?</p>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+          <br>
+          <h2>Ingredients:</h2>
+          <!--Legg til bilde eller noe her hvis du ønsker det (image placeholder eksempel)-->
+          <div class="fakeimg" style="height:200px;"></div>
+          <p>Steps to make selected type of food:</p>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+      </div>
+      
+<!-- Footer -->
+<footer>
+  <a href="#TermsOfUse">Vilkår</a>
+  <a href="#Privacy&Cookies">Privacy&Cookies</a>
+  <a href="#Sikkerhet">Sikkerhet</a>
+  <h6>&copy;Copyrights Reserved ProgTeam 2019-2030</h6>
+</footer>
+  <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
